@@ -1,0 +1,19 @@
+{
+
+    "posts": [
+        {
+            "id":1,
+            "name":"gautam"
+        },
+{
+            "id":2,
+            "name":"kkkk"
+        },
+        {
+          "id": 3,
+          "name": "ada"
+        }
+
+
+    ]
+}

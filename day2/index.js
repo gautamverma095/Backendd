@@ -1,18 +1,23 @@
 const http = require("http")
+const fs  = require("fs")
 
 const server = http.createServer((req, res) => {
 
 
-    if (req.url === "/adu")
+    if (req.url === "/posts")
     {
-        return res.end("adu is here")
+
+        const data = fs.readFileSync("./posts.json", "utf-8")
+        res.setHeader("content-type","application/json")
+        
+        return res.end(data)
     }
 
-    else if (req.url === "/")
-    {
-        res.setHeader("content-type", "text/html")
-       return  res.end("<h2>I am h2</h2>")
-        }
+    // else if (req.url === "/")
+    // {
+    //     res.setHeader("content-type", "text/html")
+    //    return  res.end("<h2>I am h2</h2>")
+    //     }
     else {
         return res.end("gautam is here")
     }
