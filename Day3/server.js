@@ -9,10 +9,13 @@ const port = process.env.PORT || 3000
 
 app.get("/", (req, res) => {
 
- 
+
     res.send("homepage")
 
 })
+
+
+
 app.post("/addproducts", (req, res) => {
     const file = fs.readFileSync("./db.json", "utf-8")
 
@@ -21,9 +24,9 @@ app.post("/addproducts", (req, res) => {
 
     console.log(parsedFile);
     fs.writeFileSync("./db.json", JSON.stringify(parsedFile), "utf-8")
-    
+
     res.send("product added")
-   
+
 })
 
 

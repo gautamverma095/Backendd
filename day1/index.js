@@ -2,7 +2,6 @@
 
 // console.log(crypto.randomInt(0, 10));
 
-// const myArgs = process.argv.slice(2);
 // console.log('myArgs: ', myArgs);
 const Random = require("crypto");
 const num = Random.randomInt(10, 101);
