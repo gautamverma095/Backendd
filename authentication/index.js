@@ -42,7 +42,7 @@ app.post("/login", async (req, res) => {
 
     bcrypt.compare(password, hash, function (err, result) {
         // result == true
-        if (result) {
+        if (result) {  
             var token = jwt.sign({ email: email }, 'shhhhh');
 
             res.status(201).json({msg:"login successfull", token: token })
@@ -54,7 +54,6 @@ app.post("/login", async (req, res) => {
 
     });
 
-    const result = await UserModel.findOne({ email, password })
     
 })
 
